@@ -19,5 +19,8 @@
   "homepage": "https://github.com/saifalushi1/pg13-documents#readme",
   "dependencies": {
     "typescript": "^5.1.6"
+  },
+  "devDependencies": {
+    "@types/node": "^20.5.3"
   }
 }
