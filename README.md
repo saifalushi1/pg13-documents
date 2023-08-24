@@ -7,4 +7,4 @@
 ### program structure
 
 _this will probably change but its good practice at architecture_
-<img src="./pg-diagram.png">
+<img src="./resources/pg-diagram.png">
