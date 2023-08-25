@@ -5,10 +5,9 @@ export function fileArgValidator(filePath: string): ValidateResult {
     const validFileTypes = ["txt", "pdf", "doc", "docx"];
     const splitPath = filePath.split(".");
     const isValid = validFileTypes.some((val) => {
-        splitPath[splitPath.length - 1] === val;
+        return splitPath[splitPath.length - 1] === val;
     });
     const fileExists = fs.existsSync(filePath);
-
     if (isValid === true && fileExists === true) {
         return {
             status: "success",

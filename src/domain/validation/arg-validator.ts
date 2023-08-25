@@ -27,14 +27,14 @@ export function argValidator(args: string[]) {
     }
     const secondArgValidation = listArgValidator(args[3], documentRatingArg);
     if (secondArgValidation.shouldExit === true) {
+        console.log("failing second");
         return;
     }
     const thirdArgValidation = listArgValidator(args[4], createNewDocumentArg);
     if (thirdArgValidation.shouldExit === true) {
+        console.log("failing third");
         return;
     }
-    //position 3 is for document rating
-    //   if(createNewDocumentArg !==)
 }
 
 function firstArgValidator(arg: string, helpArg: string): ValidateResult {
@@ -49,7 +49,7 @@ function listArgValidator(
     arg: string,
     listOfValidArgs: string[],
 ): ValidateResult {
-    if (listOfValidArgs.some((val) => val !== arg)) {
+    if (!listOfValidArgs.some((val) => val === arg)) {
         help();
         return {
             shouldExit: true,
