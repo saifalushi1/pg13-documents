@@ -1,1 +1,4 @@
-const userArg = process.argv[2];
+import { argValidator } from "./domain/arg-validator";
+
+const userArgs = process.argv;
+argValidator(userArgs);
