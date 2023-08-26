@@ -21,7 +21,7 @@ export function argValidator(args: string[]) {
     const firstArgValidation = firstArgValidator(args[2], helpArg);
     if (firstArgValidation.shouldExit === true) {
         if (firstArgValidation.status === "failure") {
-            console.log(firstArgValidation.message);
+            console.log(`${firstArgValidation.message}\n` || "\n");
         }
         return;
     }
